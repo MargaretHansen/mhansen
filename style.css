@@ -1,26 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
 body {
-  font-family: Consolas, sans-serif;
-  background-color: #fab882;
-  text-align: left;
-  margin-top: 50px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #faeecf;
+  color: #052736;
 }
 
 h1 {
-  color: #177ba9;
-}
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  margin: 0;
-  background-color: #fab882;
-  color: #00193a;
+  color: #073b53;
 }
 
-header {
+/* ---- Homepage: top bar ---- */
+
+.top-bar {
+  width: 100%;
+  padding: 1.5rem 2rem;
   text-align: center;
-  padding: 60px 20px 40px;
 }
 
-header h1 {
+.top-bar h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
   letter-spacing: 1px;
@@ -38,40 +44,43 @@ header h1 {
   border-bottom: 1px solid #00193a;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+/* ---- Homepage: three-column layout ---- */
+
+.main-layout {
+  display: flex;
+  height: calc(100vh - 160px); /* adjust if top-bar height changes */
 }
 
-.gallery-item img {
+.nav-column {
+  width: 33.333%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3rem;
+}
+
+.nav-column a {
+  display: block;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #052736;
+}
+
+.gallery-column {
+  width: 66.666%;
+  overflow-y: auto;
+}
+
+.gallery-column img {
   width: 100%;
-  height: 300px;
+  height: 100vh;
   object-fit: cover;
-  border-radius: 4px;
+  display: block;
 }
 
-.gallery-item p {
-  text-align: left;
-  margin-top: 8px;
-  font-weight: 500;
-}.gallery-item img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 4px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
+/* ---- Project detail pages ---- */
 
-.gallery-item img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
 .project-header {
   text-align: center;
   padding: 40px 20px;
