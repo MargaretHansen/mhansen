@@ -37,22 +37,27 @@ h1 {
 }
 
 .about {
-  max-width: 600px;
-  margin: 0 auto 15px;
+  max-width: 800px;
+  margin: 0 0 15px 0;
   color: #00193a;
+  text-align: left;
+  font-size: .85em;
 }
 
-.contact a {
-  color: #00193a;
-  text-decoration: none;
-  border-bottom: 1px solid #00193a;
+.title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  justify-content: flex-start;
 }
 
 /* ---- Homepage: three-column layout ---- */
 
 .main-layout {
   display: flex;
-  height: calc(100vh - 160px); /* adjust if top-bar height changes */
+  flex: 1;
+  min-height: 0;
+  margin-right: 30px;
 }
 
 .nav-column {
@@ -60,19 +65,31 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: top;
-  padding: 0 2rem;
+  padding: 0 0rem;
 }
 
 .nav-column a {
   display: block;
-  margin-bottom: 1.5rem;
+  margin-bottom: .5rem;
   text-decoration: none;
   font-size: 1.5rem;
+   color: #073b53;
+  font-weight: bold;
+  font-style: oblique 10deg;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-origin: left;
+}
+
+.nav-column a:hover {
+  transform: scale(1.05);
   color: #052736;
+;
 }
 
 .media-grid {
   width: 66.666%;
+  height: 100%;
+  min-height: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, 1fr);
@@ -143,19 +160,4 @@ h1 {
 .project-gallery img {
   width: 100%;
   border-radius: 8px;
-}
-.media-grid {
-  width: 66.666%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(3, 1fr);
-  gap: 4px;
-}
-.main-layout {
-  display: flex;
-  flex: 1;
-  min-height: 0;
-  margin-bottom: 30px;
-  margin-right: 30px;
 }
