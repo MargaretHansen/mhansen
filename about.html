@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About | Margaret Hansen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="top-bar">
+  <div class="title-row">
+    <h1><a href="index.html" class="home-link">Home</a> | About</h1>
+  </div>
+</div>
+
+  <div class="about-layout">
+
+   <div class="about-left">
+  <img src="images/headshot.jpg" alt="Margaret Hansen headshot" class="headshot">
+  <p class="info-line name-line">Margaret Hansen</p>
+  <p class="info-line">Email: mhansen.arch@gmail.com</p>
+  <p class="info-line">Phone: (313)-421-8005</p>
+  <p class="bio">
+   Architectural designer experienced in Affordable and Senior Housing Design in Detroit, Michigan.
+  </p>
+</div>
+
+    <div class="about-right">
+
+      <div class="contact-form-section">
+        <h2>Send a Message:</h2>
+        <form id="contact-form" action="https://formspree.io/f/moeqgyzl" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name..." required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Your Email Address..." required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your Message..." required></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+        <p id="form-success" style="display:none;">Thanks! Your message has been sent.</p>
+      </div>
+
+      <div class="about-image">
+        <img src="images/about-photo.jpg" alt="About page image">
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
